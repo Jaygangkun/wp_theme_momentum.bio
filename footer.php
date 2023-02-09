@@ -10,11 +10,11 @@
 ?>
 </div>
 
-<div class="footer">
+<div class="footer" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor="#page_content_wrap" data-aos-anchor-placement="bottom-bottom">
     <div class="container-lg">
         <div class="footer-wrap">
             <div class="footer-wrap-left">
-                <p>Privacy Policy</p>
+				<p><a href="<?= get_site_url_from_root('/privacy-policy') ?>">Privacy Policy</a></p>
                 <p>All Content Copyright 2023</p>
             </div>
             <div class="footer-wrap-center">
@@ -35,6 +35,5 @@
 </div>
 
 <?php wp_footer(); ?>
-
 </body>
 </html>

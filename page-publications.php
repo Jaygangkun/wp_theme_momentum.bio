@@ -29,7 +29,7 @@
                         </div>
                         <div class="publication-wrap-right">
                             <p class="publication-date"></p>
-                            <p class="publication-name"><?= get_the_title($publication->ID)?></p>
+                            <p class="publication-name"><a href="<?= get_field('url', $publication->ID) ?>"><?= get_the_title($publication->ID)?></a></p>
                             <p class="publication-publisher"><?= get_field('author', $publication->ID)?></p>
                         </div>
                     </div>
