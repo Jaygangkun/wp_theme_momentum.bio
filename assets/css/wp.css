@@ -151,6 +151,53 @@ select {
     color: #000000;
 }
 
+.publication-wrap {
+    display: flex;
+    padding-top: 20px;
+    border-top: 2px solid #808080;
+    margin-bottom: 20px;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 300;
+}
+
+.publication-wrap-left {
+    width: 80px;
+}
+
+.publication-num {
+    font-weight: 800;
+    margin: 0px;
+}
+
+.publication-date {
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.publication-name {
+    font-weight: 800;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.publication-author {
+    margin: 0px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.publication-journal,
+.publication-other,
+.publication-url {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+a {
+    outline: none !important;
+}
+
 @media screen and (max-width: 425px) {
     .news-search-wrap {
         display: block;

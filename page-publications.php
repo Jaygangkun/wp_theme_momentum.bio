@@ -28,9 +28,12 @@
                             <span class="publication-num"><?= $publicationIndex ?></span>
                         </div>
                         <div class="publication-wrap-right">
-                            <p class="publication-date"></p>
+                            <p class="publication-date"><?= get_field('date', $publication->ID)?></p>
                             <p class="publication-name"><a href="<?= get_field('url', $publication->ID) ?>"><?= get_the_title($publication->ID)?></a></p>
-                            <p class="publication-publisher"><?= get_field('author', $publication->ID)?></p>
+                            <p class="publication-author"><?= get_field('author', $publication->ID)?></p>
+                            <p class="publication-journal"><?= get_field('journal', $publication->ID)?></p>
+                            <p class="publication-other"><?= get_field('other', $publication->ID)?></p>
+                            <p class="publication-url"><?= get_field('url', $publication->ID)?></p>
                         </div>
                     </div>
                     <?php
