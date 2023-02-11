@@ -46,9 +46,6 @@
 				<a class="menu-link" href="<?= get_site_url_from_root('/about') ?>">about</a>
 			</div>
 			<div class="menu-link-wrap">
-				<a class="menu-link" href="<?= get_site_url_from_root('/media-kit') ?>">media kit</a>
-			</div>
-			<div class="menu-link-wrap">
 				<a class="menu-link" href="<?= get_site_url_from_root('/management') ?>">management</a>
 			</div>
 			<div class="menu-link-wrap">
