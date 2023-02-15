@@ -26,11 +26,11 @@
                 <div class="news-search-wrap">
                     <div class="news-search-input-wrap">
                         <label>KEYWORD SEARCH</label>
-                        <input type="text">
+                        <input type="text" id="search_keyword">
                     </div>
                     <div class="news-search-input-wrap">
                         <label>FILTER BY</label>
-                        <select>
+                        <select id="search_filter">
                             <option value="">Tag</option>
                             <?php
                             $tags = get_tags(array(
@@ -76,7 +76,9 @@
                         <div class="news-wrap">
                             <div class="news-wrap-left">
                                 <div class="news-date"><?= get_the_date('m/d/Y', $news->ID) ?></div>
-                                <div class="news-title"><?= get_the_title($news->ID) ?></div>
+                                <div class="news-title">
+                                    <a href="<?= get_permalink($news->ID)?>"><?= get_the_title($news->ID) ?></a>
+                                </div>
                                 <div class="news-desc"><?= get_the_excerpt($news->ID) ?></div>
                             </div>
                             <div class="news-wrap-right">
@@ -114,7 +116,9 @@
                         ?>
                         <div class="event-wrap">
                             <div class="event-wrap-left">
-                                <div class="event-title"><?= get_the_title($event->ID) ?></div>
+                                <div class="event-title">
+                                    <a href="<?= get_permalink($event->ID)?>"><?= get_the_title($event->ID) ?></a>
+                                </div>
                                 <div class="event-date"><?= get_field('date', $event->ID) ?></div>
                                 <div class="event-desc"><?= get_field('description', $event->ID) ?></div>
                                 <div class="event-location"><?= get_field('location', $event->ID) ?></div>
@@ -154,7 +158,9 @@
                         ?>
                         <div class="event-wrap">
                             <div class="event-wrap-left">
-                                <div class="event-title"><?= get_the_title($event->ID) ?></div>
+                                <div class="event-title">
+                                    <a href="<?= get_permalink($event->ID)?>"><?= get_the_title($event->ID) ?></a>
+                                </div>
                                 <div class="event-date"><?= get_field('date', $event->ID) ?></div>
                                 <div class="event-desc"><?= get_field('description', $event->ID) ?></div>
                                 <div class="event-location"><?= get_field('location', $event->ID) ?></div>

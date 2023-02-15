@@ -20,11 +20,11 @@
                 <div class="news-search-wrap">
                     <div class="news-search-input-wrap">
                         <label>KEYWORD SEARCH</label>
-                        <input type="text">
+                        <input type="text" id="search_keyword">
                     </div>
                     <div class="news-search-input-wrap">
                         <label>FILTER BY</label>
-                        <select>
+                        <select id="search_filter">
                             <option value="">Tag</option>
                             <?php
                             $tags = get_tags(array(
@@ -44,7 +44,7 @@
         
         <div class="container-lg">
             <div class="tab-content" data-type="news">
-                <div class="news-list" id="news_list">
+                <div class="news-list" id="blogs_list">
                     <?php
                     $arrNews = get_posts(array(
                         'post_type' => 'post',
@@ -84,4 +84,5 @@
             </div>
         </div>
 	</div>
+    <script src="<?= get_template_directory_uri()?>/assets/js/wp-page/blogs.js"></script>
 <?php get_footer() ?>

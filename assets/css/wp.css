@@ -76,7 +76,7 @@ select {
 .news-wrap,
 .event-wrap {
     padding: 20px 0px;
-    border-bottom: 2px solid #808080;
+    border-bottom: 1px solid #808080;
     display: flex;
     justify-content: space-between;
     font-size: 11px;
@@ -151,10 +151,14 @@ select {
     color: #000000;
 }
 
+.publication-name a:hover {
+    color: #848484;
+}
+
 .publication-wrap {
     display: flex;
     padding-top: 20px;
-    border-top: 2px solid #808080;
+    border-top: 1px solid #808080;
     margin-bottom: 20px;
     font-size: 11px;
     line-height: 13px;
@@ -198,6 +202,69 @@ a {
     outline: none !important;
 }
 
+.news-title a,
+.event-title a {
+    color: #000000;
+}
+
+.page-single-wrap {
+    display: flex;
+}
+
+.page-single-wrap-left {
+    margin-right: 80px;
+}
+
+.page-single-type {
+    font-weight: 800;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000000;
+}
+
+.single-post-date {
+    margin: 0px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 300;
+}
+
+.single-post-title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 19px;
+    color: #000000;
+    font-weight: 800;
+}
+
+.single-post-desc {
+    font-size: 11px;
+    line-height: 13px;
+    font-size: 500;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.single-post-back-link {
+    color: #000000;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 768px) {
+    .news-tab-nav-wrap {
+        margin-right: 40px;
+        margin-bottom: 10px;
+    }
+
+    .news-tab-link {
+        font-size: 16px;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .news-search-wrap {
         display: block;
@@ -206,5 +273,44 @@ a {
     .news-search-input-wrap {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .news-tab-nav-wrap {
+        margin-right: 20px;
+        margin-bottom: 5px;
+    }
+
+    .news-tab-link {
+        font-size: 12px;
+    }
+
+    .news-search-input-wrap label {
+        font-size: 10px;
+    }
+
+    .page-news-top {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .news-search-wrap {
+        margin-top: 10px;
+    }
+
+    .news-search-input-wrap {
+        margin-bottom: 10px;
+    }
+
+    .news-wrap, .event-wrap {
+        display: block;
+    }
+
+    .news-wrap-left, .event-wrap-left {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .news-list, .events-list {
+        margin-top: 30px;
     }
 }

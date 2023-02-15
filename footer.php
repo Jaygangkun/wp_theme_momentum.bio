@@ -39,8 +39,10 @@
                 </p>
             </div>
             <div class="footer-bottom">
-                <p><a href="<?= get_site_url_from_root('/privacy-policy')?>">Privacy Policy</a></p>
-                <p>All Content Copyright <?= date("Y")?></p>
+                <div>
+                    <p><a href="<?= get_site_url_from_root('/privacy-policy')?>">Privacy Policy</a></p>
+                    <p>All Content Copyright <?= date("Y")?></p>
+                </div>
                 <div class="footer-wrap-right">
                     <div class="footer-social-icons">
                         <img class="footer-social-img" src="<?= get_template_directory_uri()?>/assets/images/ci4/icon-rg.png"></img>

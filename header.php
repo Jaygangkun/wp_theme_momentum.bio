@@ -17,11 +17,15 @@
 <link rel="icon" type="image/x-icon" href="<?= get_template_directory_uri()?>/assets/images/ci4/m-logo-black.png">
 
 <?php wp_head(); ?>
+<script>
+	const adminAjax = '<?php echo admin_url('admin-ajax.php')?>';
+</script>
 <link rel="stylesheet" id="aos-style-css" href="<?= get_template_directory_uri()?>/assets/css/ci4/aos.css" media="all">
 <link rel="stylesheet" id="ci4-style-css" href="<?= get_template_directory_uri()?>/assets/css/ci4/style.css" media="all">
 <link rel="stylesheet" id="wp-style-css" href="<?= get_template_directory_uri()?>/assets/css/wp.css" media="all">
 <script src="<?= get_template_directory_uri()?>/assets/js/ci4/jquery-3.6.0.min.js"></script>
 <script src="<?= get_template_directory_uri()?>/assets/js/ci4/aos.js"></script>
+<script src="<?= get_template_directory_uri()?>/assets/js/donetyping.js"></script>
 <script src="<?= get_template_directory_uri()?>/assets/js/ci4/global.js"></script>
 </head>
 
@@ -31,8 +35,8 @@
 		<div class="container-lg">
 			<div class="header-wrap">
 				<a href="<?= get_site_url_from_root('/')?>">
-					<img class="header-logo-img visible-dark" src="<?= get_template_directory_uri()?>/assets/images/ci4/momentum-logo-white.png">
-					<img class="header-logo-img visible-white" src="<?= get_template_directory_uri()?>/assets/images/ci4/momentum-logo-black.png">
+					<img class="header-logo-img visible-dark" src="<?= get_template_directory_uri()?>/assets/images/ci4/momentum-logo-white.svg">
+					<img class="header-logo-img visible-white" src="<?= get_template_directory_uri()?>/assets/images/ci4/momentum-logo-black.svg">
 				</a>
 				<span class="nav-hamburger" id="btn_nav_hamburger">
 					<span></span>
