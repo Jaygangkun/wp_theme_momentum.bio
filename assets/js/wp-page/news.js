@@ -36,10 +36,10 @@
     }
 
     jQuery('#search_keyword').donetyping(function(){
-        // search();
+        search();
     });
 
     $(document).on('change', '#search_filter', function() {
-        // search();
+        search();
     })
 })(jQuery)

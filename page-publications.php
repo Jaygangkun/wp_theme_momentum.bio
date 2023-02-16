@@ -18,6 +18,8 @@
                     'post_type' => 'publication',
                     'numberposts' => -1,
                     'posts_per_page' => -1,
+                    'orderby'=> 'post_date', 
+                    'order' => 'ASC'
                 ));
 
                 $publicationIndex = 1;

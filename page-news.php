@@ -56,14 +56,6 @@
                         'post_type' => 'post',
                         'numberposts' => -1,
                         'posts_per_page' => -1,
-                        'tax_query'             => array(
-                            array(
-                                'taxonomy'      => 'category',
-                                'field'         => 'slug',
-                                'terms'         => array('news'),
-                                'operator'      => 'IN'
-                            ),
-                        )
                     ));
 
                     foreach($arrNews as $news) {
