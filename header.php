@@ -31,7 +31,7 @@
 
 <body class="theme-white">
 
-	<div class="header" data-aos="fade-in" data-aos-duration="1500">
+	<div class="header" id="header">
 		<div class="container-lg">
 			<div class="header-wrap">
 				<a href="<?= get_site_url_from_root('/')?>">
@@ -56,7 +56,7 @@
 				<a class="menu-link" href="<?= get_site_url_from_root('/services') ?>">services</a>
 			</div>
 			<div class="menu-link-wrap">
-				<a class="menu-link" href="<?= get_site_url_from_root('/platforms') ?>">platforms</a>
+				<a class="menu-link" href="<?= get_site_url_from_root('/laboratory') ?>">laboratory</a>
 			</div>
 			<div class="menu-link-wrap">
 				<a class="menu-link" href="<?= get_site_url()?>/publications">publications</a>
@@ -72,4 +72,4 @@
 			</div>
 		</div>
 	</div>
-	<div class="page-content-container" id="page_content_wrap" data-aos="fade-in" data-aos-duration="1500">
+	<div class="page-content-container" id="page_content_wrap">

@@ -56,6 +56,14 @@
                         'post_type' => 'post',
                         'numberposts' => -1,
                         'posts_per_page' => -1,
+                        'tax_query'             => array(
+                            array(
+                                'taxonomy'      => 'category',
+                                'field'         => 'slug',
+                                'terms'         => array('news'),
+                                'operator'      => 'IN'
+                            ),
+                        )
                     ));
 
                     foreach($arrNews as $news) {
@@ -109,7 +117,7 @@
                         <div class="event-wrap">
                             <div class="event-wrap-left">
                                 <div class="event-title">
-                                    <a href="<?= get_permalink($event->ID)?>"><?= get_the_title($event->ID) ?></a>
+                                    <?= get_the_title($event->ID) ?>
                                 </div>
                                 <div class="event-date"><?= get_field('date', $event->ID) ?></div>
                                 <div class="event-desc"><?= get_field('description', $event->ID) ?></div>
@@ -140,7 +148,7 @@
                             ),
                         )
                     ));
-
+                    
                     foreach($arrEvents as $event) {
                         $tags = get_the_tags($event->ID);
                         $arrTagTexts = [];
@@ -151,7 +159,7 @@
                         <div class="event-wrap">
                             <div class="event-wrap-left">
                                 <div class="event-title">
-                                    <a href="<?= get_permalink($event->ID)?>"><?= get_the_title($event->ID) ?></a>
+                                    <?= get_the_title($event->ID) ?>
                                 </div>
                                 <div class="event-date"><?= get_field('date', $event->ID) ?></div>
                                 <div class="event-desc"><?= get_field('description', $event->ID) ?></div>

@@ -77,7 +77,9 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 
  function news_search() {
 	$args = [
-		'post_type' => 'post'
+		'post_type' => 'post',
+		'numberposts' => -1,
+		'posts_per_page' => -1,
 	];
 
 	if(!empty($_POST['keyword'])) {
@@ -95,7 +97,8 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 				array(
 					'taxonomy' => 'event_type',
 					'field' => 'slug',
-					'terms' => 'upcoming'
+					'terms' => array('upcoming'),
+					'operator' => 'IN'
 				)
 			);
 		}
@@ -106,7 +109,8 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 				array(
 					'taxonomy' => 'event_type',
 					'field' => 'slug',
-					'terms' => 'past'
+					'terms' => array('past'),
+					'operator' => 'IN'
 				)
 			);
 		}
@@ -117,8 +121,8 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 				array(
 					'taxonomy' => 'category',
 					'field' => 'slug',
-					'terms'         => array('blogs'),
-					'operator'      => 'IN'
+					'terms' => array('blogs'),
+					'operator' => 'IN'
 				)
 			);
 		}
@@ -163,6 +167,15 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 					<div class="news-title">
 						<a href="<?= get_permalink($news->ID)?>"><?= get_the_title($news->ID) ?></a>
 					</div>
+					<?php
+					if($_POST['type'] == 'blogs') {
+						$author_id = get_post_field( 'post_author', $news->ID );
+						$author_name = get_the_author_meta( 'display_name', $author_id );
+						?>
+						<div class="news-author"><?= $author_name ?></div>
+						<?php
+					}
+					?>
 					<div class="news-desc"><?= get_the_excerpt($news->ID) ?></div>
 				</div>
 				<div class="news-wrap-right">
@@ -182,7 +195,7 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 			<div class="event-wrap">
 				<div class="event-wrap-left">
 					<div class="event-title">
-						<a href="<?= get_permalink($news->ID)?>"><?= get_the_title($event->ID) ?></a>
+						<?= get_the_title($event->ID) ?>
 					</div>
 					<div class="event-date"><?= get_field('date', $event->ID) ?></div>
 					<div class="event-desc"><?= get_field('description', $event->ID) ?></div>

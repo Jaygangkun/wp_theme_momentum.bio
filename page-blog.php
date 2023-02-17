@@ -66,11 +66,16 @@
                         foreach($tags as $tag) {
                             $arrTagTexts[] = $tag->name;
                         }
+
+                        $author_id = get_post_field( 'post_author', $news->ID );
+                        $author_name = get_the_author_meta( 'display_name', $author_id );
+
                         ?>
                         <div class="news-wrap">
                             <div class="news-wrap-left">
                                 <div class="news-date"><?= get_the_date('m/d/Y', $news->ID) ?></div>
-                                <div class="news-title"><?= get_the_title($news->ID) ?></div>
+                                <div class="news-title"><a href="<?= get_permalink($news->ID)?>"><?= get_the_title($news->ID) ?></a></div>
+                                <div class="news-author"><?= $author_name ?></div>
                                 <div class="news-desc"><?= get_the_excerpt($news->ID) ?></div>
                             </div>
                             <div class="news-wrap-right">
