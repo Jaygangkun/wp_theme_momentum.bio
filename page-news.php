@@ -8,6 +8,12 @@
 */
 
 ?>
+<?php
+$checkLogin = file_get_contents(get_site_url_from_root('/check-lock'));
+if(strpos($checkLogin, 'true') == false) {
+    wp_redirect(get_site_url_from_root('/lock'));
+}
+?>
 <?php get_header() ?>
     <div class="page-content page-content-news">
         <div class="bg-gray page-news-top">

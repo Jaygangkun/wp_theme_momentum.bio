@@ -4,8 +4,14 @@
  *
  * @package storefront
  */
-
-get_header(); ?>
+?>
+<?php
+$checkLogin = file_get_contents(get_site_url_from_root('/check-lock'));
+if(strpos($checkLogin, 'true') == false) {
+    wp_redirect(get_site_url_from_root('/lock'));
+}
+?>
+<?php get_header(); ?>
 <?php
 $categories = get_the_category();
 $categoryName = '';
