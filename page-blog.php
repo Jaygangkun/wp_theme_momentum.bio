@@ -9,8 +9,8 @@
 
 ?>
 <?php
-$checkLogin = file_get_contents(get_site_url_from_root('/check-lock'));
-if(strpos($checkLogin, 'true') == false) {
+$checkLogin = httpGet(get_site_url_from_root('/check-lock'));
+if($checkLogin == 'false') {
     wp_redirect(get_site_url_from_root('/lock'));
 }
 ?>
