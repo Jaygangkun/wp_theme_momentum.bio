@@ -24,8 +24,11 @@ if($checkLogin == 'false') {
                     'post_type' => 'publication',
                     'numberposts' => -1,
                     'posts_per_page' => -1,
-                    'orderby'=> 'post_date', 
-                    'order' => 'ASC'
+                    // 'orderby'=> 'post_date', 
+                    // 'order' => 'ASC',
+                    'orderby' => 'meta_value_num',
+                    'order' => 'DESC',
+                    'meta_key' => 'date',
                 ));
 
                 $publicationIndex = 1;
@@ -37,7 +40,7 @@ if($checkLogin == 'false') {
                         </div>
                         <div class="publication-wrap-right">
                             <p class="publication-date"><?= get_field('date', $publication->ID)?></p>
-                            <p class="publication-name"><a href="<?= get_field('url', $publication->ID) ?>"><?= get_the_title($publication->ID)?></a></p>
+                            <p class="publication-name"><a href="<?= get_field('url', $publication->ID) ?>" target="__blank"><?= get_the_title($publication->ID)?></a></p>
                             <p class="publication-author"><?= get_field('author', $publication->ID)?></p>
                             <p class="publication-journal"><?= get_field('journal', $publication->ID)?></p>
                             <p class="publication-other"><?= get_field('other', $publication->ID)?></p>

@@ -26,7 +26,7 @@
             <div class="footer-wrap-right">
                 <div class="footer-social-icons">
                     <img class="footer-social-img" src="<?= get_template_directory_uri()?>/assets/images/ci4/icon-rg.png"></img>
-                    <img class="footer-social-img" src="<?= get_template_directory_uri()?>/assets/images/ci4/icon-linkedin.png"></img>
+                    <a href="https://www.linkedin.com/company/momentumbio/" target="__blank"><img class="footer-social-img" src="<?= get_template_directory_uri()?>/assets/images/ci4/icon-linkedin.png"></img></a>
                 </div>
                 <p><a href="<?= get_site_url_from_root('/media-kit')?>">Media Library</a></p>
             </div>
@@ -46,7 +46,7 @@
                 <div class="footer-wrap-right">
                     <div class="footer-social-icons">
                         <img class="footer-social-img" src="<?= get_template_directory_uri()?>/assets/images/ci4/icon-rg.png"></img>
-                        <img class="footer-social-img" src="<?= get_template_directory_uri()?>/assets/images/ci4/icon-linkedin.png"></img>
+                        <a href="https://www.linkedin.com/company/momentumbio/" target="__blank"><img class="footer-social-img" src="<?= get_template_directory_uri()?>/assets/images/ci4/icon-linkedin.png"></img></a>
                     </div>
                     <p><a href="<?= get_site_url_from_root('/media-kit')?>">Media Library</a></p>
                 </div>
@@ -89,6 +89,9 @@
 	}
 	idleLogout();
 
+    if(jQuery('#header').length > 0) {
+		jQuery("#header").sticky({topSpacing:0});
+	}
 </script>
 <?php wp_footer(); ?>
 </body>

@@ -58,7 +58,8 @@ select {
 }
 
 .news-search-input-wrap {
-    width: calc(50% - 10px);
+    /* width: calc(50% - 10px); */
+    width: 100%;
 }
 
 .news-search-input-wrap label{
@@ -259,6 +260,14 @@ a {
     line-height: 15px;
 }
 
+.single-post-desc a {
+  text-decoration: underline;
+}
+
+.single-post-desc a:hover {
+  color: #646363;
+}
+
 .single-post-back-link {
     color: #000000;
     font-size: 11px;
@@ -281,6 +290,12 @@ a {
 .single-post-desc h2 {
     font-size: 1.2em;
     line-height: 1.214;
+}
+
+ul li {
+  font-size: 11px;
+  line-height: 15px;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {

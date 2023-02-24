@@ -28,7 +28,7 @@ if($checkLogin == 'false') {
                         <label>KEYWORD SEARCH</label>
                         <input type="text" id="search_keyword">
                     </div>
-                    <div class="news-search-input-wrap">
+                    <div class="news-search-input-wrap" style="display:none">
                         <label>FILTER BY</label>
                         <select id="search_filter">
                             <option value="">Tag</option>

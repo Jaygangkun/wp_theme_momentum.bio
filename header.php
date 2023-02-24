@@ -24,7 +24,7 @@
 <link rel="stylesheet" id="ci4-style-css" href="<?= get_template_directory_uri()?>/assets/css/ci4/style.css" media="all">
 <link rel="stylesheet" id="wp-style-css" href="<?= get_template_directory_uri()?>/assets/css/wp.css" media="all">
 <script src="<?= get_template_directory_uri()?>/assets/js/ci4/jquery-3.6.0.min.js"></script>
-<script src="<?= get_template_directory_uri()?>/assets/js/ci4/aos.js"></script>
+<script src="<?= get_template_directory_uri()?>/assets/js/ci4/jquery.sticky.js"></script>
 <script src="<?= get_template_directory_uri()?>/assets/js/donetyping.js"></script>
 <script src="<?= get_template_directory_uri()?>/assets/js/ci4/global.js"></script>
 </head>
