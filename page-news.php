@@ -145,6 +145,9 @@ if($checkLogin == 'false') {
                         'post_type' => 'event',
                         'numberposts' => -1,
                         'posts_per_page' => -1,
+                        'orderby' => 'meta_value_num',
+                        'order' => 'DESC',
+                        'meta_key' => 'sort_date_hidden',
                         'tax_query'             => array(
                             array(
                                 'taxonomy'      => 'event_type',

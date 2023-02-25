@@ -105,6 +105,9 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 
 		if($_POST['type'] == 'past_events') {
 			$args['post_type'] = 'event';
+      $args['orderby'] = 'meta_value_num';
+      $args['order'] = 'DESC';
+      $args['meta_key'] = 'sort_date_hidden';
 			$args['tax_query'] = array(
 				array(
 					'taxonomy' => 'event_type',
@@ -249,3 +252,12 @@ if(!function_exists('httpGet')){
         return $response;
     }
 }
+
+function add_momentumbio_favicon() {
+  $favicon_path = get_template_directory_uri() . '/assets/images/ci4/m-logo-black.png';
+
+  echo '<link rel="shortcut icon" href="' . esc_url($favicon_path) . '" />';
+}
+
+add_action( 'wp_head', 'add_momentumbio_favicon' ); //front end
+add_action( 'admin_head', 'add_momentumbio_favicon' ); //admin end

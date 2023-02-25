@@ -67,7 +67,7 @@
 	cbResize();
 	jQuery(window).resize(cbResize);
 	
-    function idleLogout() {
+  function idleLogout() {
 		var t;
 		window.onload = resetTimer;
 		window.onmousemove = resetTimer;
@@ -87,7 +87,7 @@
 			t = setTimeout(cbLogout, 1000 * 60 * 15);  // time is in milliseconds
 		}
 	}
-	idleLogout();
+	// idleLogout();
 
     if(jQuery('#header').length > 0) {
 		jQuery("#header").sticky({topSpacing:0});
