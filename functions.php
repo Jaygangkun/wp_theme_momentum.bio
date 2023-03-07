@@ -164,11 +164,11 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 				$arrTagTexts[] = $tag->name;
 			}
 			?>
-			<div class="news-wrap">
+			<a class="news-wrap" href="<?= get_permalink($news->ID)?>">
 				<div class="news-wrap-left">
 					<div class="news-date"><?= get_the_date('m/d/Y', $news->ID) ?></div>
 					<div class="news-title">
-						<a href="<?= get_permalink($news->ID)?>"><?= get_the_title($news->ID) ?></a>
+						<?= get_the_title($news->ID) ?>
 					</div>
 					<?php
 					if($_POST['type'] == 'blogs') {
@@ -184,7 +184,7 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 				<div class="news-wrap-right">
 					<p class="news-tags"><?= implode(',', $arrTagTexts)?></p>
 				</div>
-			</div>
+            </a>
 			<?php
 		}
 		else if($args['post_type'] == 'event') {
