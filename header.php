@@ -20,6 +20,13 @@
 <script>
 	const adminAjax = '<?php echo admin_url('admin-ajax.php')?>';
 </script>
+
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RQB54SR123"> </script> 
+<script>   
+  window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-RQB54SR123'); 
+</script>
+
 <link rel="stylesheet" id="aos-style-css" href="<?= get_template_directory_uri()?>/assets/css/ci4/aos.css" media="all">
 <link rel="stylesheet" id="ci4-style-css" href="<?= get_template_directory_uri()?>/assets/css/ci4/style.css" media="all">
 <link rel="stylesheet" id="wp-style-css" href="<?= get_template_directory_uri()?>/assets/css/wp.css" media="all">
